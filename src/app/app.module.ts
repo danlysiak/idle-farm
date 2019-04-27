@@ -11,6 +11,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ShopTypeComponent } from './components/shop/shop-type/shop-type.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StoreModule } from './modules/store.module';
+import { DevComponent } from './components/dev/dev.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StoreModule } from './modules/store.module';
     InventoryComponent,
     BannerComponent,
     ShopTypeComponent,
-    FooterComponent
+    FooterComponent,
+    DevComponent
   ],
   imports: [
     BrowserModule,

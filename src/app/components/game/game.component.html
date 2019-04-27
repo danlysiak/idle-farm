@@ -10,4 +10,9 @@
       <app-info [producers]="data.producers" [sellers]="data.sellers"></app-info>
     </div>
   </div>
+  <div *ngIf="devMode | async" class="row">
+    <div class="col-md">
+      <app-dev></app-dev>
+    </div>
+  </div>
 </div>

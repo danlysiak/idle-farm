@@ -1,0 +1,18 @@
+<div class="card mt-3">
+  <div class="card-header">
+    Behind the scenes
+  </div>
+  <div class="card-body">
+    <div class="col-md-8 card p-0">
+      <div class="card-header">Game state</div>
+      <div class="card-body pr-0 pb-0">
+        <h6 class="card-subtitle mb-2 text-muted">
+          Managed with
+          <a href="https://github.com/angular-redux/platform/tree/master/packages/store"
+            target="_blank">angular-redux</a>
+        </h6>
+        <pre class="pre-scrollable mb-0">{{ (game$ | async) | json }}</pre>
+      </div>
+    </div>
+  </div>
+</div>

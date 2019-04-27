@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DevService } from '../../services/dev.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  devMode: Observable<boolean>;
+
+  constructor(private devService: DevService) { }
+
+  toggleDev() {
+    this.devService.toggleDev();
+  }
 
   ngOnInit() {
+    this.devMode = this.devService.getDevMode();
   }
 
 }

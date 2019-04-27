@@ -2,5 +2,7 @@
   <div class="container">
     <a href="https://github.com/danlysiak/idle-farm/" target="_blank" class="fa fa-github"></a>
     <a href="https://www.linkedin.com/in/danlysiak/" target="_blank" class="fa fa-linkedin"></a>
+    <button type="button" (click)="toggleDev()" class="btn btn-dark float-right text-muted"
+      [class.active]="devMode | async">Toggle Dev Mode</button>
   </div>
 </footer>
