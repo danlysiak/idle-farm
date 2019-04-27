@@ -1,0 +1,21 @@
+<div class="card border-light mb-3" style="height: 100%;">
+  <div class="card-header">Information</div>
+  <div class="card-body">
+    <table class="table table-hover table-active">
+      <tbody>
+        <tr>
+          <td>Production rate</td>
+          <td class="text-info">£ {{ producers.rates | number }} /s</td>
+        </tr>
+        <tr>
+          <td>Selling rate</td>
+          <td class="text-success">£ {{ sellers.rates | number }} /s</td>
+        </tr>
+        <tr>
+          <td>Efficiency</td>
+          <td>{{ (sellers.rates / producers.rates || 0) | number: '0.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

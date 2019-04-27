@@ -1,0 +1,21 @@
+<div class="card border-primary mb-3 text-center">
+  <div class="card-header">Money</div>
+  <div class="card-body">
+    <h4 class="card-title">£ {{ inventory.money | number: '0.2-2' }}</h4>
+  </div>
+</div>
+<div *ngFor="let item of items | keyvalue" class="card border-primary mb-3 text-center">
+  <div class="card-header">{{ item.value.name }} - £ {{ item.value.sell | number: '0.0-2' }} each</div>
+
+  <div class="card-body">
+    {{ (inventory.items[item.value.id]?.count || 0) | number }}
+  </div>
+  <div class="card-footer">
+    <div class="d-flex justify-content-between">
+      <button (click)="collect(item.value.id)" type="button" class="btn btn-outline-primary"
+        style="width:48%">Collect</button>
+      <button (click)="sell(item.value.id)" type="button" class="btn btn-outline-primary"
+        [disabled]="inventory.items[item.value.id]?.count === 0" style="width:48%">Sell</button>
+    </div>
+  </div>
+</div>

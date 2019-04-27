@@ -1,0 +1,16 @@
+<div *ngIf="(shop.items | async) as items" class="list-group">
+  <button *ngFor="let item of items | keyvalue: order" (click)="buy(item.value)" type="button"
+    class="list-group-item list-group-item btn-{{ shop.context }} pt-1 pb-1 pl-3 pr-3"
+    [disabled]="item.value.cost > inventory.money">
+    <div class="d-flex justify-content-between">
+      <div>
+        {{ item.value.name }}
+      </div>
+      <div>
+        £ {{ item.value.cost | number: '0.2-2' }}
+      </div>
+    </div>
+    <div class="text-left">x {{ (items[item.value.id]?.qty || 0) | number }} at
+      {{ item.value.rate }} {{ inventory.items[item.value.for].name }} /s</div>
+  </button>
+</div>

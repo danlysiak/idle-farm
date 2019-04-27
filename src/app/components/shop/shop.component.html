@@ -1,0 +1,16 @@
+<div class="card border-light mb-3" style="height: 100%;">
+  <div class="card-header">Shop</div>
+  <div class="card-body p-1">
+    <ul class="nav nav-tabs">
+      <li *ngFor="let shop of shops; let first = first" class="nav-item">
+        <a class="btn btn-light" [class.active]="first" data-toggle="tab" href="#{{ shop.id }}">{{ shop.name }}</a>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div *ngFor="let shop of shops; let first = first" class="tab-pane fade" [ngClass]="first ? 'active show' : null"
+        [id]="shop.id">
+        <app-shop-type [inventory]="inventory" [shop]="shop"></app-shop-type>
+      </div>
+    </div>
+  </div>
+</div>

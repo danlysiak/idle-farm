@@ -1,0 +1,13 @@
+<div *ngIf="{ inventory: inventory$ | async, producers: producers$ | async, sellers: sellers$ | async } as data">
+  <div class="row">
+    <div class="col-md">
+      <app-inventory [inventory]="data.inventory"></app-inventory>
+    </div>
+    <div class="col-md">
+      <app-shop [inventory]="data.inventory"></app-shop>
+    </div>
+    <div class="col-md">
+      <app-info [producers]="data.producers" [sellers]="data.sellers"></app-info>
+    </div>
+  </div>
+</div>
