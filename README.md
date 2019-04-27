@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/danlysiak/idle-farm.svg?branch=master)](https://travis-ci.org/danlysiak/idle-farm)
+
 # Idle Farm
 
 ### Play [Idle Farm](https://danlysiak.github.io/idle-farm/)!
