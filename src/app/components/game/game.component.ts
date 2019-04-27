@@ -12,9 +12,9 @@ import { DevService } from '../../services/dev.service';
 })
 export class GameComponent implements OnInit {
 
-  @select(['inventory']) readonly inventory$: Observable<InventoryState>;
-  @select(['producers']) readonly producers$: Observable<ShopState>;
-  @select(['sellers']) readonly sellers$: Observable<ShopState>;
+  @select() readonly inventory$: Observable<InventoryState>;
+  @select() readonly producers$: Observable<ShopState>;
+  @select() readonly sellers$: Observable<ShopState>;
 
   devMode: Observable<boolean>;
 
