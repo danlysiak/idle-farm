@@ -17,7 +17,7 @@ npm install
 ```
 
 ```sh
-npm run serve
+ng serve
 ```
 
 ## License
