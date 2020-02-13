@@ -4,7 +4,7 @@
 
 ### Play [Idle Farm](https://danlysiak.github.io/idle-farm/)!
 
-Idle clicker game built using Angular 7 with Redux.
+Idle clicker game built using Angular 9 with Redux.
 
 An Angular version inspired by [Farmclicker](https://aaronvanston.github.io/farmclicker/).
 
