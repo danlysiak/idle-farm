@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/danlysiak/idle-farm.svg?branch=master)](https://travis-ci.org/danlysiak/idle-farm)
+![Build Status](https://github.com/danlysiak/idle-farm/actions/workflows/build-deploy.yml/badge.svg)
 
 # Idle Farm
 
