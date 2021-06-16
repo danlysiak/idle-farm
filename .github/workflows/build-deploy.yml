@@ -25,6 +25,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          npm install
           npm install -g @angular/cli
           ng build --configuration production --base-href /idle-farm/
 
